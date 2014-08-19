@@ -12,4 +12,12 @@ class FibSuite extends FunSuite {
     assert(simpleFib(10) === 55)
   }
 
+  test("tail fibonacci algo") {
+    assert(tailFib(10) === 55)
+  }
+
+  test("tail and simple fibonacci algo is equals") {
+    assert(tailFib(10)===simpleFib(10))
+  }
+
 }

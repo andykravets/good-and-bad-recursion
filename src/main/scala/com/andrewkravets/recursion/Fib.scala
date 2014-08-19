@@ -8,5 +8,12 @@ object Fib {
     else simpleFib(x - 1) + simpleFib(x - 2)
   }
 
+  def tailFib(x: Int): Int = {
+    def loop(x: Int, acc: Int): Int = {
+      if (x == 0) acc
+      else loop(x - 1, acc + x)
+    }
+    loop(x, 0)
+  }
 
 }
