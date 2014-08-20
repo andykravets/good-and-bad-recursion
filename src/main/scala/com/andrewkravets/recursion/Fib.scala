@@ -9,11 +9,11 @@ object Fib {
   }
 
   def tailFib(x: Int): Int = {
-    def loop(x: Int, acc: Int): Int = {
+    def loop(acc: Int, b: Int, x: Int): Int = {
       if (x == 0) acc
-      else loop(x - 1, acc + x)
+      else loop(b, acc + b, x-1)
     }
-    loop(x, 0)
+    loop(0, 1, x)
   }
 
 }
